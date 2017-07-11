@@ -1,0 +1,46 @@
+<h3><%= @student.full_name %> </h3> 
+<ul>
+  <li><%= @student.email %> <%= @student.phone%></li>
+  <li>Bio: <%= @student.short_bio %></li>
+  <li>LinkcapstoneIn: <%= @student.link_in %></li>
+  <li>LinkedIn: <%= @student.twiter %></li>
+  <li>Personal Blog: <%= @student.personal_url %></li>
+<li>Online Resume URL: <%= @student.resume_url %></li>
+<li>Github URL: <%= @student.github_url %></li>
+<li>Avatar: <%= @student.avatar%></li>
+</ul>
+<hr>
+<h3>Experiences: </h3>
+<li><% @student.experiences.each do |exp| %></li>
+<li><%= exp.job_title %></li>
+<li><%= exp.company_name %></li>
+<li><%= exp.start_date %>--<%= exp.end_date %></p>
+<li>exp.details</li>
+<% end %>
+<hr>
+<h3>Educations: </h3>
+<ul>
+<li><% @student.educations.each do |ed| %></li>
+<li><%= ed.degree %></li>
+<li><%= ed.university_name %>
+<p><%= ed.start_date %>--<%= ed.end_date %></p>
+<% end %>
+</ul>
+<hr>
+<h3>skills: </h3>
+<ul>
+<li><% @student.skills.each do |skill| %></li>
+<li><%= skill.skill_name %> </li>
+<% end %>
+</ul>
+<hr>
+<h3>Capstone: </h3>
+<ul>
+<li><%= capstone.name %></li>
+<li><%= capstone.description %></li>
+<li><%= capstone.url %></li>
+<li><%= capstone.screenshot %></li>
+</ul>
+
+
+
